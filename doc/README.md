@@ -279,14 +279,14 @@ Install TalkiePi with:
 $cd $GOPATH/src
 $go get periph.io/x/periph/cmd/...
 $go get github.com/dchote/gopus
-$go get github.com/CustomMachines/talkiepi
-$go build -o $GOPATH/bin/talkiepi $GOPATH/src/github.com/CustomMachines/talkiepi/cmd/talkiepi/main.go
+$go get github.com/BobbyLindsey/talkiepi
+$go build -o $GOPATH/bin/talkiepi $GOPATH/src/github.com/BobbyLindsey/talkiepi/cmd/talkiepi/main.go
 ~~~
 
-The RPi Zero needs libopenal complied without ARM NEON support. These packages can be found in the [workarounds](https://github.com/CustomMachines/talkiepi/blob/master/workarounds) directory of this repo. They can be installed over the existing libopenal libraries.
+The RPi Zero needs libopenal complied without ARM NEON support. These packages can be found in the [workarounds](https://github.com/BobbyLindsey/talkiepi/blob/master/workarounds) directory of this repo. They can be installed over the existing libopenal libraries.
 
 ~~~
-$cd ~/go/src/github.com/CustomMachines/talkiepi/workarounds
+$cd ~/go/src/github.com/BobbyLindsey/talkiepi/workarounds
 $sudo apt install ./libopenal-dev_1.17.2-4_armhf.deb
 $sudo apt install ./libopenal1_1.17.2-4_armhf.deb
 $sudo apt install ./libopenal-data_1.17.2-4_all.deb
@@ -333,7 +333,7 @@ If all is well the Systemd service can be created. Copy the service file to the 
 
 ~~~
 $cd
-$sudo cp /home/pi/go/src/github.com/CustomMachines/talkiepi/conf/systemd/mumble.service /etc/systemd/system/mumble.service
+$sudo cp /home/pi/go/src/github.com/BobbyLindsey/talkiepi/conf/systemd/mumble.service /etc/systemd/system/mumble.service
 ~~~
 
 Edit the service file with:
